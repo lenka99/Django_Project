@@ -3,7 +3,8 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse, reverse_lazy
 from Insta.models import Post
 
-from django.contrib.auth.forms import UserCreationForm
+
+from Insta.forms import CustomUserCreationForm
 
 class HelloWorld(TemplateView):
     template_name = 'test.html'
@@ -32,7 +33,7 @@ class PostDeleteView(DeleteView):
     success_url = reverse_lazy("posts")
 
 class SignUp(CreateView):
-    form_class = UserCreationForm
+    form_class = CustomUserCreationForm
     success_url = reverse_lazy("login")
     template_name = "signup.html"
     
