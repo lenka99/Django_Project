@@ -10,7 +10,6 @@ pylint = "*"
 django = "*"
 django-imagekit = "*"
 pillow = "*"
-dgango-annoying = "*"
 django-annoying = "*"
 
 [requires]
